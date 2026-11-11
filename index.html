@@ -68,7 +68,7 @@
         .result-label { font-size: 14px; opacity: 0.85; margin-bottom: 8px; }
         .result-price { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; }
 
-        .btn-primary { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none; width: 100%; padding: 16px; border-radius: 14px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 20px; transition: transform 0.1s; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); }
+        .btn-primary { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none; width: 100%; padding: 16px; border-radius: 14px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 20px; transition: transform 0.1s; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); text-decoration: none; display: block; text-align: center; box-sizing: border-box;}
         .btn-primary:active { transform: scale(0.97); }
 
         .car-item { background: var(--card-bg); border-radius: 16px; overflow: hidden; margin-bottom: 16px; padding: 16px; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); }
@@ -94,7 +94,7 @@
         <div class="logo-text">MAX AUTO</div>
     </div>
 
-    <!-- Головна навігація (без Трекінгу) -->
+    <!-- Головна навігація -->
     <div class="header-nav">
         <div class="segmented-control">
             <div class="tab active" onclick="switchTab('catalog')" id="tab-catalog">🚗 Каталог</div>
@@ -157,99 +157,98 @@
         <!-- 2. АУКЦІОН США -->
         <div id="list-usa" class="car-list">
             <div class="car-item" data-price="110000" data-brand="audi">
-                <div class="car-title">🆕   Авто торгується на аукціоні 14.10   🆕</div>
-                <div class="car-specs">🆕   Авто торгується на аукціоні 14.10   🆕
-
-⚡АУДІ R8 2022 ⚡
-
- 🇺🇸Авто з США🇺🇸
-
-📈Рі...</div>
-                <div class="car-price-tag">$ 110 000</div><span class="car-status status-usa">США / Аукціон</span>
+                <div class="car-title">🆕 Авто торгується на аукціоні 14.10 🆕</div>
+                <div class="car-specs">⚡АУДІ R8 2022 ⚡ 🇺🇸Авто з США🇺🇸</div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px;">
+                    <div>
+                        <div style="color: #9ca3af; text-decoration: line-through; font-size: 12px; margin-bottom: 4px;">На AutoRIA: ~$ 132 000</div>
+                        <div class="car-price-tag" style="margin-bottom: 0;">$ 110 000</div>
+                    </div>
+                    <span class="car-status status-usa">США / Аукціон</span>
+                </div>
+                
                 <div style="display: flex; gap: 8px; margin-top: 10px;">
-                    <button class="btn-primary" style="margin-top:0; flex:1;" onclick="orderCar('🆕   Авто торгується на аукціоні 14.10   🆕')">Залишити заявку</button>
+                    <a href="tel:+380953656601" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; display:flex; align-items:center; justify-content:center; font-size: 14px; background: linear-gradient(135deg, #10b981, #059669);">📞 Менеджер</a>
                     <a href="https://t.me/c/3919853128/229" target="_blank" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; background: linear-gradient(135deg, #2563eb, #1d4ed8); display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
                 </div>
             </div>
+
             <div class="car-item" data-price="16000" data-brand="other">
-                <div class="car-title">🆕   Авто торгується на аукціоні 15.10   🆕</div>
-                <div class="car-specs">🆕   Авто торгується на аукціоні 15.10   🆕
+                <div class="car-title">🆕 Авто торгується на аукціоні 15.10 🆕</div>
+                <div class="car-specs">⚡2022 Polestar 2 Performance ⚡ 🇺🇸Авто з США🇺🇸</div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px;">
+                    <div>
+                        <div style="color: #9ca3af; text-decoration: line-through; font-size: 12px; margin-bottom: 4px;">На AutoRIA: ~$ 19 200</div>
+                        <div class="car-price-tag" style="margin-bottom: 0;">$ 16 000</div>
+                    </div>
+                    <span class="car-status status-usa">США / Аукціон</span>
+                </div>
 
-⚡2022 Polestar 2 Performance ⚡
-
- 🇺🇸Ав...</div>
-                <div class="car-price-tag">$ 16 000</div><span class="car-status status-usa">США / Аукціон</span>
                 <div style="display: flex; gap: 8px; margin-top: 10px;">
-                    <button class="btn-primary" style="margin-top:0; flex:1;" onclick="orderCar('🆕   Авто торгується на аукціоні 15.10   🆕')">Залишити заявку</button>
+                    <a href="tel:+380953656601" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; display:flex; align-items:center; justify-content:center; font-size: 14px; background: linear-gradient(135deg, #10b981, #059669);">📞 Менеджер</a>
                     <a href="https://t.me/c/3919853128/219" target="_blank" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; background: linear-gradient(135deg, #2563eb, #1d4ed8); display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
                 </div>
             </div>
+
             <div class="car-item" data-price="27200" data-brand="other">
-                <div class="car-title">🆕   Авто торгується на аукціоні 15.10   🆕</div>
-                <div class="car-specs">🆕   Авто торгується на аукціоні 15.10   🆕
+                <div class="car-title">🆕 Авто торгується на аукціоні 15.10 🆕</div>
+                <div class="car-specs">⚡CADILLAC LYRIQ SPORT 2024⚡ 🇺🇸Авто з США🇺🇸</div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px;">
+                    <div>
+                        <div style="color: #9ca3af; text-decoration: line-through; font-size: 12px; margin-bottom: 4px;">На AutoRIA: ~$ 32 640</div>
+                        <div class="car-price-tag" style="margin-bottom: 0;">$ 27 200</div>
+                    </div>
+                    <span class="car-status status-usa">США / Аукціон</span>
+                </div>
 
-⚡CADILLAC LYRIQ SPORT 2024⚡
-
- 🇺🇸Авто ...</div>
-                <div class="car-price-tag">$ 27 200</div><span class="car-status status-usa">США / Аукціон</span>
                 <div style="display: flex; gap: 8px; margin-top: 10px;">
-                    <button class="btn-primary" style="margin-top:0; flex:1;" onclick="orderCar('🆕   Авто торгується на аукціоні 15.10   🆕')">Залишити заявку</button>
+                    <a href="tel:+380953656601" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; display:flex; align-items:center; justify-content:center; font-size: 14px; background: linear-gradient(135deg, #10b981, #059669);">📞 Менеджер</a>
                     <a href="https://t.me/c/3919853128/209" target="_blank" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; background: linear-gradient(135deg, #2563eb, #1d4ed8); display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
                 </div>
-            </div></div>
+            </div>
+        </div>
 
         <!-- 3. ІНШІ КРАЇНИ -->
         <div id="list-other" class="car-list">
+            <div class="car-item" data-price="16850" data-brand="kia">
+                <div class="car-title">❗️Авто доступне до огляду в Кореї❗️</div>
+                <div class="car-specs">⚡️Kia Carnival Diesel 9-seater Prestige⚡️</div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px;">
+                    <div>
+                        <div style="color: #9ca3af; text-decoration: line-through; font-size: 12px; margin-bottom: 4px;">На AutoRIA: ~$ 20 220</div>
+                        <div class="car-price-tag" style="margin-bottom: 0;">$ 16 850</div>
+                    </div>
+                    <span class="car-status status-other">Корея / Європа</span>
+                </div>
+
+                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                    <a href="tel:+380953656601" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; display:flex; align-items:center; justify-content:center; font-size: 14px; background: linear-gradient(135deg, #10b981, #059669);">📞 Менеджер</a>
+                    <a href="https://t.me/c/3919853128/265" target="_blank" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; background: linear-gradient(135deg, #2563eb, #1d4ed8); display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
+                </div>
+            </div>
+
             <div class="car-item" data-price="13500" data-brand="renault">
                 <div class="car-title">❗️Авто доступне до огляду в Кореї❗️</div>
-                <div class="car-specs">❗️Авто доступне до огляду в Кореї❗️
+                <div class="car-specs">⚡️Renault Koleos Diesel 2WD LE⚡️</div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px;">
+                    <div>
+                        <div style="color: #9ca3af; text-decoration: line-through; font-size: 12px; margin-bottom: 4px;">На AutoRIA: ~$ 16 200</div>
+                        <div class="car-price-tag" style="margin-bottom: 0;">$ 13 500</div>
+                    </div>
+                    <span class="car-status status-other">Корея / Європа</span>
+                </div>
 
- ⚡️Renault Koleos Diesel 2WD LE⚡️
-
-      🇰🇷...</div>
-                <div class="car-price-tag">$ 13 500</div><span class="car-status status-other">Корея / Європа</span>
                 <div style="display: flex; gap: 8px; margin-top: 10px;">
-                    <button class="btn-primary" style="margin-top:0; flex:1;" onclick="orderCar('❗️Авто доступне до огляду в Кореї❗️')">Залишити заявку</button>
+                    <a href="tel:+380953656601" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; display:flex; align-items:center; justify-content:center; font-size: 14px; background: linear-gradient(135deg, #10b981, #059669);">📞 Менеджер</a>
                     <a href="https://t.me/c/3919853128/257" target="_blank" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; background: linear-gradient(135deg, #2563eb, #1d4ed8); display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
                 </div>
             </div>
-            <div class="car-item" data-price="40000" data-brand="other">
-                <div class="car-title">❗️Авто доступне до викупу  ❗️</div>
-                <div class="car-specs">❗️Авто доступне до викупу  ❗️
-
-⚡️A7 Sportback 40 TDI 204PK S-tronic S-line⚡️
-   ...</div>
-                <div class="car-price-tag">$ 40 000</div><span class="car-status status-other">Корея / Європа</span>
-                <div style="display: flex; gap: 8px; margin-top: 10px;">
-                    <button class="btn-primary" style="margin-top:0; flex:1;" onclick="orderCar('❗️Авто доступне до викупу  ❗️')">Залишити заявку</button>
-                    <a href="https://t.me/c/3919853128/248" target="_blank" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; background: linear-gradient(135deg, #2563eb, #1d4ed8); display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
-                </div>
-            </div>
-            <div class="car-item" data-price="12400" data-brand="other">
-                <div class="car-title">❗️Авто доступне до огляду в Кореї❗️</div>
-                <div class="car-specs">❗️Авто доступне до огляду в Кореї❗️
-
- ⚡️Infiniti Q50 2.2d Premium ⚡️
-
-      🇰🇷 А...</div>
-                <div class="car-price-tag">$ 12 400</div><span class="car-status status-other">Корея / Європа</span>
-                <div style="display: flex; gap: 8px; margin-top: 10px;">
-                    <button class="btn-primary" style="margin-top:0; flex:1;" onclick="orderCar('❗️Авто доступне до огляду в Кореї❗️')">Залишити заявку</button>
-                    <a href="https://t.me/c/3919853128/237" target="_blank" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; background: linear-gradient(135deg, #2563eb, #1d4ed8); display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
-                </div>
-            </div>
-            <div class="car-item" data-price="16700" data-brand="kia">
-                <div class="car-title">❗️Авто доступне до огляду в Кореї❗️</div>
-                <div class="car-specs">❗️Авто доступне до огляду в Кореї❗️
-
- ⚡️Kia Sportage Diesel 2.0 2WD Prestige ⚡️
-...</div>
-                <div class="car-price-tag">$ 16 700</div><span class="car-status status-other">Корея / Європа</span>
-                <div style="display: flex; gap: 8px; margin-top: 10px;">
-                    <button class="btn-primary" style="margin-top:0; flex:1;" onclick="orderCar('❗️Авто доступне до огляду в Кореї❗️')">Залишити заявку</button>
-                    <a href="https://t.me/c/3919853128/198" target="_blank" class="btn-primary" style="margin-top:0; flex:1; text-align:center; text-decoration:none; background: linear-gradient(135deg, #2563eb, #1d4ed8); display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
-                </div>
-            </div></div>
+        </div>
     </div>
 
     <!-- Вкладка: КАЛЬКУЛЯТОР -->
@@ -302,11 +301,12 @@
                 <div class="result-label">Вартість в Україні "Під ключ"</div>
                 <div class="result-price" id="final-price">$0</div>
             </div>
-            <button class="btn-primary" onclick="orderCar('Розрахунок з калькулятора')">Надіслати розрахунок</button>
+            
+            <a href="tel:+380953656601" class="btn-primary" style="margin-top: 20px; background: linear-gradient(135deg, #10b981, #059669);">📞 Зв'язок з менеджером</a>
         </div>
     </div>
 
-    <!-- Вкладка: БЛОК ДОВІРИ (Як ми працюємо) -->
+    <!-- Вкладка: БЛОК ДОВІРИ -->
     <div id="trust" class="content">
         <div class="trust-step">
             <div class="trust-num">1</div>
@@ -343,7 +343,6 @@
         tg.expand(); 
 
         function switchTab(tabName) {
-            // Ховаємо всі вкладки та знімаємо активні класи з кнопок
             document.getElementById('catalog').classList.remove('active');
             document.getElementById('calculator').classList.remove('active');
             document.getElementById('trust').classList.remove('active');
@@ -352,7 +351,6 @@
             document.getElementById('tab-calc').classList.remove('active');
             document.getElementById('tab-trust').classList.remove('active');
 
-            // Активуємо потрібну вкладку
             document.getElementById(tabName).classList.add('active');
             document.getElementById('tab-' + tabName).classList.add('active');
         }
@@ -454,15 +452,6 @@
             document.getElementById('fee-customs').innerText = "$ " + Math.round(customs).toLocaleString('ru-RU');
             document.getElementById('fee-company').innerText = "$ " + Math.round(companyFee).toLocaleString('ru-RU');
             document.getElementById('final-price').innerText = "$ " + Math.round(total).toLocaleString('ru-RU');
-        }
-
-        function orderCar(carName) {
-            tg.showConfirm(`Відправити заявку на: ${carName}?`, function(confirmed) {
-                if(confirmed) {
-                    tg.sendData("Order: " + carName);
-                    tg.close();
-                }
-            });
         }
     </script>
 </body>
