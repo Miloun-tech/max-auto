@@ -38,13 +38,35 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 24px 0 16px 0;
+            padding: 20px 0 16px 0;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
         }
 
-        .brand-logo-svg {
-            width: 140px;
+        .brand-logo-img {
+            width: 160px; /* Розмір самої картинки М */
             height: auto;
+            object-fit: contain;
+            margin-bottom: -15px; /* Зсуваємо текст ближче до логотипу */
+            filter: drop-shadow(0 4px 16px rgba(0, 166, 25, 0.25));
+        }
+
+        .brand-text-main {
+            color: #FFFFFF;
+            font-family: 'Montserrat', 'Arial Black', sans-serif;
+            font-weight: 900;
+            font-size: 34px;
+            letter-spacing: 2px;
+            line-height: 1;
+            margin-top: 10px;
+        }
+
+        .brand-text-sub {
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 5px;
+            margin-top: 4px;
         }
 
         .header-nav {
@@ -284,27 +306,14 @@
 </head>
 <body>
 
-    <!-- Ідеальна геометрія логотипу (за оригіналом) -->
+    <!-- Шапка з оригінальним зображенням логотипу -->
     <div class="brand-header">
-        <svg class="brand-logo-svg" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <mask id="maks-cut">
-                    <rect width="200" height="180" fill="white"/>
-                    <!-- Лінія вирізу, що точно відповідає зеленій лінії (з невеликим відступом) -->
-                    <line x1="28" y1="126" x2="162" y2="10" stroke="black" stroke-width="12"/>
-                </mask>
-            </defs>
-
-            <!-- Основна літера М, обрізана маскою -->
-            <polygon points="40,115 40,45 100,85 160,45 160,115 130,115 130,75 100,95 70,75 70,115" fill="#007A0D" mask="url(#maks-cut)"/>
-            
-            <!-- Фірмова зелена лінія -->
-            <line x1="30" y1="124" x2="160" y2="12" stroke="#009E11" stroke-width="3.5" stroke-linecap="round"/>
-            
-            <!-- Текст -->
-            <text x="100" y="152" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="28" letter-spacing="2">MAKS</text>
-            <text x="100" y="170" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-weight="700" font-size="12" letter-spacing="4.5">AUTO_UA</text>
-        </svg>
+        <!-- Картинка вашого оригінального лого -->
+        <img src="IMG_1181.PNG" alt="Логотип MAKS AUTO" class="brand-logo-img">
+        
+        <!-- Ідеально рівний текст системним шрифтом -->
+        <div class="brand-text-main">MAKS</div>
+        <div class="brand-text-sub">AUTO_UA</div>
     </div>
 
     <!-- Головна навігація -->
