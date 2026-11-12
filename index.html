@@ -38,14 +38,17 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 24px 0 16px 0;
+            padding: 5px 0 0 0; /* Мінімальні відступи шапки */
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
         }
 
         .brand-logo-img {
-            width: 210px; /* Збільшений розмір логотипу */
+            width: 280px; /* Збільшений логотип */
+            max-width: 90vw;
             height: auto;
             object-fit: contain;
+            margin-top: -25px; /* Компенсація верхнього прозорого фону картинки */
+            margin-bottom: -20px; /* Компенсація нижнього прозорого фону картинки */
             filter: drop-shadow(0 4px 16px rgba(0, 166, 25, 0.25));
         }
 
