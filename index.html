@@ -38,14 +38,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 18px 0 12px 0;
+            padding: 24px 0 16px 0;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
         }
 
         .brand-logo-svg {
-            width: 150px;
+            width: 140px;
             height: auto;
-            filter: drop-shadow(0 4px 16px rgba(0, 166, 25, 0.28));
         }
 
         .header-nav {
@@ -285,30 +284,26 @@
 </head>
 <body>
 
-    <!-- Фірмовий логотип MAKS AUTO_UA (Точна 3D копія) -->
+    <!-- Ідеальна геометрія логотипу (за оригіналом) -->
     <div class="brand-header">
-        <svg class="brand-logo-svg" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 8px 16px rgba(0, 158, 17, 0.25));">
+        <svg class="brand-logo-svg" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <linearGradient id="green-3d" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#00BA14" />
-                    <stop offset="100%" stop-color="#007A0D" />
-                </linearGradient>
+                <mask id="maks-cut">
+                    <rect width="200" height="180" fill="white"/>
+                    <!-- Лінія вирізу, що точно відповідає зеленій лінії (з невеликим відступом) -->
+                    <line x1="28" y1="126" x2="162" y2="10" stroke="black" stroke-width="12"/>
+                </mask>
             </defs>
 
-            <!-- Нижня ліва частина -->
-            <polygon points="58,110 58,68 100,110" fill="url(#green-3d)"/>
+            <!-- Основна літера М, обрізана маскою -->
+            <polygon points="40,115 40,45 100,85 160,45 160,115 130,115 130,75 100,95 70,75 70,115" fill="#007A0D" mask="url(#maks-cut)"/>
             
-            <!-- Верхня та права частина (зміщена для 3D ефекту) -->
-            <polygon points="58,26 122,66 186,26 186,110 156,110 156,70 122,91 107,76 74,42" fill="url(#green-3d)"/>
+            <!-- Фірмова зелена лінія -->
+            <line x1="30" y1="124" x2="160" y2="12" stroke="#009E11" stroke-width="3.5" stroke-linecap="round"/>
             
-            <!-- Довга діагональна лінія розрізу -->
-            <line x1="38" y1="126" x2="204" y2="12" stroke="#009E11" stroke-width="4.5" stroke-linecap="round"/>
-            
-            <!-- Напис MAKS -->
-            <text x="120" y="152" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', 'Arial Black', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="900" font-size="34" letter-spacing="2">MAKS</text>
-            
-            <!-- Напис AUTO_UA -->
-            <text x="120" y="174" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="14" letter-spacing="5.5">AUTO_UA</text>
+            <!-- Текст -->
+            <text x="100" y="152" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="28" letter-spacing="2">MAKS</text>
+            <text x="100" y="170" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-weight="700" font-size="12" letter-spacing="4.5">AUTO_UA</text>
         </svg>
     </div>
 
@@ -407,6 +402,24 @@
                     <a href="https://t.me/c/3919853128/219" target="_blank" class="btn-primary" style="margin-top:0; flex:1; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.18); box-shadow: none; display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
                 </div>
             </div>
+
+            <div class="car-item" data-price="27200" data-brand="other">
+                <div class="car-title">🆕 Авто торгується на аукціоні 15.10 🆕</div>
+                <div class="car-specs">⚡CADILLAC LYRIQ SPORT 2024⚡ 🇺🇸Авто з США🇺🇸</div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px;">
+                    <div>
+                        <div style="color: #9ca3af; text-decoration: line-through; font-size: 12px; margin-bottom: 4px;">На AutoRIA: ~$ 32 640</div>
+                        <div class="car-price-tag" style="margin-bottom: 0;">$ 27 200</div>
+                    </div>
+                    <span class="car-status status-usa">США / Аукціон</span>
+                </div>
+
+                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                    <a href="tel:+380953656601" class="btn-primary" style="margin-top:0; flex:1; display:flex; align-items:center; justify-content:center; font-size: 14px;">📞 Менеджер</a>
+                    <a href="https://t.me/c/3919853128/209" target="_blank" class="btn-primary" style="margin-top:0; flex:1; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.18); box-shadow: none; display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
+                </div>
+            </div>
         </div>
 
         <!-- 2. КОРЕЯ -->
@@ -426,6 +439,24 @@
                 <div style="display: flex; gap: 8px; margin-top: 10px;">
                     <a href="tel:+380953656601" class="btn-primary" style="margin-top:0; flex:1; display:flex; align-items:center; justify-content:center; font-size: 14px;">📞 Менеджер</a>
                     <a href="https://t.me/c/3919853128/265" target="_blank" class="btn-primary" style="margin-top:0; flex:1; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.18); box-shadow: none; display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
+                </div>
+            </div>
+
+            <div class="car-item" data-price="13500" data-brand="renault">
+                <div class="car-title">❗️Авто доступне до огляду в Кореї❗️</div>
+                <div class="car-specs">⚡️Renault Koleos Diesel 2WD LE⚡️</div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px;">
+                    <div>
+                        <div style="color: #9ca3af; text-decoration: line-through; font-size: 12px; margin-bottom: 4px;">На AutoRIA: ~$ 16 200</div>
+                        <div class="car-price-tag" style="margin-bottom: 0;">$ 13 500</div>
+                    </div>
+                    <span class="car-status status-korea">🇰🇷 Корея</span>
+                </div>
+
+                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                    <a href="tel:+380953656601" class="btn-primary" style="margin-top:0; flex:1; display:flex; align-items:center; justify-content:center; font-size: 14px;">📞 Менеджер</a>
+                    <a href="https://t.me/c/3919853128/257" target="_blank" class="btn-primary" style="margin-top:0; flex:1; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.18); box-shadow: none; display:flex; align-items:center; justify-content:center; font-size: 14px;">📸 Фото/Пост</a>
                 </div>
             </div>
         </div>
