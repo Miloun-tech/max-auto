@@ -38,18 +38,18 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 5px 0 0 0; /* Мінімальні відступи шапки */
+            padding: 8px 0 6px 0; /* Компактна шапка */
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
         }
 
         .brand-logo-img {
-            width: 280px; /* Збільшений логотип */
-            max-width: 90vw;
+            width: 100px; /* Зменшений логотип */
+            max-width: 80vw;
             height: auto;
             object-fit: contain;
-            margin-top: -25px; /* Компенсація верхнього прозорого фону картинки */
-            margin-bottom: -20px; /* Компенсація нижнього прозорого фону картинки */
-            filter: drop-shadow(0 4px 16px rgba(0, 166, 25, 0.25));
+            margin-top: -8px; /* Компенсація верхнього відступу */
+            margin-bottom: -6px; /* Компенсація нижнього відступу */
+            filter: drop-shadow(0 2px 10px rgba(0, 166, 25, 0.25));
         }
 
         .header-nav {
@@ -289,7 +289,7 @@
 </head>
 <body>
 
-    <!-- Шапка з оригінальним зображенням логотипу -->
+    <!-- Компактна шапка з акуратним логотипом -->
     <div class="brand-header">
         <img src="logo.png" alt="Логотип MAKS AUTO" class="brand-logo-img">
     </div>
