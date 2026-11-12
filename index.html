@@ -43,7 +43,7 @@
         }
 
         .brand-logo-svg {
-            width: 145px;
+            width: 150px;
             height: auto;
             filter: drop-shadow(0 4px 16px rgba(0, 166, 25, 0.28));
         }
@@ -287,17 +287,22 @@
 
     <!-- Фірмовий логотип MAKS AUTO_UA -->
     <div class="brand-header">
-        <svg class="brand-logo-svg" viewBox="0 0 240 165" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Ліва частина літери M -->
-            <path d="M52 108V32L116 96L103 109L75 81V108H52Z" fill="#009E11"/>
-            <!-- Права частина літери M -->
-            <path d="M123 89L178 32V108H155V68L133 91L141 99L129 111L116 98L123 89Z" fill="#009E11"/>
-            <!-- Фірмова діагональна лінія розрізу -->
-            <line x1="48" y1="115" x2="192" y2="18" stroke="#009E11" stroke-width="4.5" stroke-linecap="round"/>
+        <svg class="brand-logo-svg" viewBox="0 0 240 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <mask id="maks-logo-cut">
+                    <rect width="240" height="166" fill="black"/>
+                    <polygon points="56,104 56,28 120,64 184,28 184,104 158,104 158,68 120,89 82,68 82,104" fill="white"/>
+                    <line x1="42" y1="114" x2="198" y2="14" stroke="black" stroke-width="10" stroke-linecap="round"/>
+                </mask>
+            </defs>
+            <!-- Зелена літера M з діагональним розрізом -->
+            <polygon points="56,104 56,28 120,64 184,28 184,104 158,104 158,68 120,89 82,68 82,104" fill="#009E11" mask="url(#maks-logo-cut)"/>
+            <!-- Фірмова діагональна лінія -->
+            <line x1="44" y1="113" x2="196" y2="15" stroke="#009E11" stroke-width="4.5" stroke-linecap="round"/>
             <!-- Напис MAKS -->
-            <text x="120" y="139" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-weight="900" font-size="31" letter-spacing="1.5">MAKS</text>
+            <text x="120" y="139" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', 'Arial Black', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="900" font-size="31" letter-spacing="1">MAKS</text>
             <!-- Напис AUTO_UA -->
-            <text x="120" y="159" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-weight="700" font-size="13.5" letter-spacing="5">AUTO_UA</text>
+            <text x="120" y="159" text-anchor="middle" fill="#FFFFFF" font-family="'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="13" letter-spacing="4.8">AUTO_UA</text>
         </svg>
     </div>
 
@@ -352,7 +357,7 @@
             </div>
         </div>
 
-        <!-- Новий порядок вкладок: 1 США, 2 Корея, 3 Україна, 4 В наявності -->
+        <!-- Порядок вкладок: 1 США, 2 Корея, 3 Україна, 4 В наявності -->
         <div class="sub-tabs">
             <div class="sub-tab active" onclick="switchCategory('usa')" id="cat-usa">🇺🇸 США</div>
             <div class="sub-tab" onclick="switchCategory('korea')" id="cat-korea">🇰🇷 Корея</div>
