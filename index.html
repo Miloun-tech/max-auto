@@ -574,7 +574,7 @@
             filterCars();
         }
 
-        function filterCars() {
+       function filterCars() {
             const priceFilter = document.getElementById('filter-price').value;
             const brandFilter = document.getElementById('filter-brand').value;
             
@@ -586,7 +586,8 @@
                 const brand = item.getAttribute('data-brand');
 
                 let priceMatch = true;
-                if (priceFilter === 'low') priceMatch = price < 15000;
+                if (priceFilter === 'under10k') priceMatch = price <= 10000;
+                else if (priceFilter === 'low') priceMatch = price > 10000 && price < 15000;
                 else if (priceFilter === 'mid') priceMatch = price >= 15000 && price <= 30000;
                 else if (priceFilter === 'high') priceMatch = price > 30000;
 
